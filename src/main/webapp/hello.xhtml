@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"       
+	xmlns:f="http://java.sun.com/jsf/core"       
+	xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+    	<title>JSF 2.0 Hello World</title>
+    </h:head>
+    <h:body bgcolor="white">
+    	<h2>JSF 2.0 Example - welcome.xhtml</h2>
+    	<h2>#{ex_session.message}</h2>
+    	<h:form>
+    		<h:inputText value = "#{ex_session.message}" required="true"/>
+    		<h:commandButton id="submit-button" value="Submit" action="hello.xhtml"/>  
+    	</h:form> 
+    </h:body>
+</html>

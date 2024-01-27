@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"       
+	xmlns:f="http://java.sun.com/jsf/core"       
+	xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+    	<title>Person Details</title>
+    </h:head>
+    <h:body bgcolor="white">
+    	<div>
+    		<h1>Simple ROuting Example</h1>
+    		<h:form>
+    			<h:commandButton action="#{navigation.routeToMessage}" value="Go To Message"></h:commandButton>
+    			<h:commandButton action="#{navigation.routeToPerson}" value="Go To Person"></h:commandButton>
+    		</h:form>
+    	</div>
+    	<div>
+    		<h1>PArameter ROuting Example</h1>
+    		<h:form>
+    			<h:commandButton action="#{navigation.parameterRoute}" value="Go To Message"><f:param name="id" value="1"></f:param></h:commandButton>
+    			<h:commandButton action="#{navigation.parameterRoute}" value="Go To Person"><f:param name="id" value="2"></f:param></h:commandButton>
+    		</h:form>
+    	</div>
+    </h:body>
+</html>

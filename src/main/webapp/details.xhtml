@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+    	<title>JSF 2.0 User Details</title>
+    </h:head>
+    
+    <h:body bgcolor="white">
+    
+    	<h2><h:outputText value="Welcome #{user.username}" /></h2>
+    	<h4><h:outputText value="Your Registration Data:"/></h4>
+    	
+    	<!-- dati ricevuti dalla submit -->
+    	<table>
+    		<tr>
+    			<td><h:outputLabel>Username</h:outputLabel></td>
+    			<td><h:outputText value="#{user.username}"/></td>
+    		</tr>
+    		<tr>
+    			<td><h:outputLabel>Email</h:outputLabel></td>
+    			<td><h:outputText value="#{user.email}"/></td>
+    		</tr>
+    	</table>
+    	
+    </h:body>
+    
+</html>

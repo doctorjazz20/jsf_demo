@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"       
+	xmlns:f="http://java.sun.com/jsf/core"       
+	xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+    	<title>JSF 2.0 Validation Page</title>
+    </h:head>
+    <h:body>
+    	 <h:form id = "valForm">
+    	 	<table>
+    	 		<tr>
+    	 			<td><h:outputLabel>Username</h:outputLabel></td>
+    	 			<td><h:inputText id="username" value="#{user.username}"/></td>
+    	 		</tr>
+    	 		<tr>
+    	 			<td><h:outputLabel>Email</h:outputLabel></td>
+    	 			<td>
+    	 				<h:inputText id="email" value="#{user.email}" requiredMessage="Email is Required">
+    	 					<f:validator validatorId="email_validator"/>
+    	 				</h:inputText>
+    	 			</td>
+    	 		</tr>
+    	 		<tr>
+    	 			<td><h:outputLabel>Password</h:outputLabel></td>
+    	 			<td>
+    	 				<h:inputSecret id="pasw" value="#{user.password}" required="true" requiredMessage="You Need Password">
+    	 					<f:validator validatorId="password_validator"/>
+    	 					<f:attribute name="confirmPasw" value="#{confirmPasw}"/>
+    	 				</h:inputSecret>
+    	 			</td>
+    	 		</tr>
+    	 		<tr>
+    	 			<td><h:outputLabel>Confirm Password</h:outputLabel></td>
+    	 			<td><h:inputSecret id="confirmPasw" required="true" binding="#{confirmPasw}" requiredMessage="Password must be the same"/></td>
+    	 		</tr>
+    	 		<tr>
+    	 			<td><h:commandButton id="submit" value="Submit Now" action="details.xhtml"/></td>
+    	 		</tr>
+    	 	</table>
+    	 </h:form>
+    </h:body>
+</html>
